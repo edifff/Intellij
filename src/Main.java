@@ -177,11 +177,11 @@ public class Main {
 					public void handleEvent(Event arg0) {
 						if(btnRBMaterrial.getSelection()==true) {
 							try {
-								p=map.get(str);
+								p = map.get(str);
 							} catch (NullPointerException e) {
 								// TODO: handle exception
 								k++;
-								MessageBox m2=new MessageBox(shell,SWT.ICON_WARNING| SWT.OPEN);
+								MessageBox m2 = new MessageBox(shell, SWT.ICON_WARNING | SWT.OPEN);
 								m2.setText("Ошибка");
 								m2.setMessage("Такого материала нет в базе данных");
 								m2.open();
@@ -190,31 +190,10 @@ public class Main {
 						}
 
 						// Проверка на ввод чисел
-
-						try {
-							 R=Double.parseDouble(textR.getText());
-						} catch (NumberFormatException e) {
-							k++;
-							MessageBox m2=new MessageBox(shell,SWT.ICON_WARNING| SWT.OPEN);
-							m2.setText("Ошибка");
-							m2.setMessage("Введено не число");
-							m2.open();
-
-						}
-						// Проверка на ввод чисел
-						try {
-							 L=Double.parseDouble(textL.getText());
-						} catch (NumberFormatException e) {
-							k++;
-							MessageBox m2=new MessageBox(shell,SWT.ICON_WARNING| SWT.OPEN);
-							m2.setText("Ошибка");
-							m2.setMessage("Введено не число");
-							m2.open();
-
-						}
-						// Проверка на ввод чисел
 						try {
 							 S=Double.parseDouble(textS.getText());
+							 L=Double.parseDouble(textL.getText());
+							 R=Double.parseDouble(textR.getText());
 						} catch (NumberFormatException e) {
 							k++;
 							MessageBox m2=new MessageBox(shell,SWT.ICON_WARNING| SWT.OPEN);
